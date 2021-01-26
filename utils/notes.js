@@ -1,6 +1,10 @@
 const addNote = (myNote) => {
-    console.log(myNote)
-}
+    const allNotes =loadNotes();
+    allNotes.push({reminder:myNote });
+
+
+    saveNote(allNotes);
+};
 
 const fs = require("fs");
 
@@ -14,6 +18,19 @@ const loadNotes = () => {
       }
     };
 
+    saveNote(allNotes);
+    
+
+    const listNote = (myNote) => {
+        const allNotes =loadNotes();
+        
+        allNotes.map(note => {
+            console.log(note);
+        });
+    };
+
+
 module.exports = {
-    addNote
+    addNote,
+    listNotes
 }

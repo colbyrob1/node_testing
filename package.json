@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/colbyrob1/node_testing#readme",
   "dependencies": {
+    "JSON": "^1.0.0",
+    "chalk": "^4.1.0",
     "yargs": "^16.2.0"
   }
 }
